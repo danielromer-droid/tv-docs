@@ -33,6 +33,8 @@ jobs:
         with:
           name: TvDocs-apk
           path: TvDocs.apk
+          # The APK is published on the Releases page; this copy is only temporary.
+          retention-days: 1
 
       - name: Publish "latest" release
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
